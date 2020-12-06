@@ -1,28 +1,68 @@
 <!DOCTYPE>
-<html>
-  <head>
-  
-  <title> My Website</title>
-  
-  
-  
-  
-  
-  </head>
-  <body>
-  <h1> Introduction </h1>
-  
-  <p> This is the beginning of something beautiful. </p>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </body>
+<html lang="en">
+<head>
+
+<title> My Website</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+blockquote {border: 5px solid black; padding:30px; margin:30px; line-height:200%}
+
+body {background-image: linear-gradient(AliceBlue 80%,Azure,GhostWhite); margin:0}
+
+br {color:black}
+
+.Email {display:block; text-align:center}
+
+.menuBar { overflow:hidden }
+
+.menuBarItems {background-color:black;color:white; text-decoration:none; text-align:center; border:none;float:left; width:33.33%; font-size:20px; padding:10px 0px}
+
+.Icons {text-align:center}
+
+.Icons a {padding:0px 30px}
+
+.ProjectDescription {line-height:200%; margin: 0px 500px}
+
+.Drop {display:inline-block;position:relative}
+
+.dropMenuBlock {display:none; position:relative}
+
+.dropMenuBlock a {display:block; color:white; background-color:black; padding-top: 10px}
+
+.show {display:block}
+
+.ProjectName {text-align:center; font-size: 30px; font-weight:bold; font-style: italic}
+
+.Projects {background-color: black; color:white; border:none;}
+
+.link {text-align:center}
+
+.link a {text-decoration:none}
+
+.Contact {margin-left: 20px}
+
+#Location {font-size:10px; position:relative; bottom:2px}
+
+</style>
+
+
+<!-- JavaScript -->
+<script>
+
+function drop(){
+	document.getElementById("dropMenu").classList.toggle("show");
+	var x = document.getElementById("Location");
+	if(x.innerHTML === "\u25b2"){
+		 x.innerHTML = "\u25bc";
+	} else {
+		x.innerHTML = "\u25b2";
+	}
+}
+
+</script>
+</head>
 
 
 
@@ -30,6 +70,99 @@
 
 
 
+<body>
+<div class="menuBar">
+
+	
+
+	<a href ="#About" class = "menuBarItems"> About Me </a>
+	<a href = "#Contact" class = "menuBarItems"> Contact </a>
+	
+	<div class = "Drop, menuBarItems">
+		<a onclick ="drop()" id = "Projects" class = "Projects"> Projects <span id = "Location">&#9650</span></a>
+		<div id="dropMenu" class ="dropMenuBlock">
+			<a href = "#P1"> Project 1 </a>
+			<a href = "#P2"> Project 2 </a>
+			<a href = "#P3"> Project 3 </a>
+		</div>
+	</div>
 
 
+</div>
+
+<p style="font-size:100px; text-align:center"><b> Welcome </b></p>
+<hr>
+
+<p id="About" style="text-align:center; font-size:30px"> About Me <p>
+<div style="text-align:center">
+<img src="Info/Self.jpg" style="width:200px">
+</div>
+<blockquote> Hello. My name is <b>Ngawang Rinchen</b>, and I am currently a student attending <b>Brookyln College CUNY</b>, majoring in <b>Physics</b> and <b>Computer Science</b>.  Computer science is no doubt a current and future cortnerstone of our current 
+civilization, and by majoring in it, I hope to learn all that it has to offer and utilize it to generate the change I want to see in both my own life and the world.  I am also doing physics because I hope to pursue a masters in engineering to build machines that will
+run my code. With computer science, I hope to explore my interest in data security and, with physics (potentially engineering), I hope to explore my interest in automation of every processes.  That being said, I have created this website to demonstrate my current 
+progress in Computer Science, and listed below are some of the projects that I have started/finished over my career. </blockquote>
+<hr>
+
+<p id = "P1" class = "ProjectName"> Project_One: Geography Quiz </p>
+<div class = "link">
+<a href = "https://github.com/barrycoder123/GeographyGame"> Geography Game </a>
+</div>
+<br>
+<p class = "ProjectDescription"> The Geography Quiz is my latest project and still currently underdevelopment.  It was a group project that my friend and I started to test our geographical knowledge.  We have finished the code itself, running as expected.  However,
+since we finished prematurely, we wanted to improve the project while exploring GUI programming since both of us are inexperienced with it.  We are currently trying to implement the code into a java swing file to have operational application.</p>
+
+<div class = "link">
+<a></a>
+</div>
+
+<hr>
+<p id= "P2" class = "ProjectName">Project_Two: Drip </p>
+
+<div class = "link">	
+<a href = "Drip.zip"> Drip.Zip </a>
+</div>
+<br>
+<p class="ProjectDescription">  This was a homework assignment that I had done in my first java class.  I found it notable because it was something that I did not expect in that we were challenged to write a program that would calculate the drip rate to adminster
+to the patient.  This was the first project where we applied our CS knowledge to topics outside that realm, and it was this project that allowed me to begin thinking about where I could use what I have learned in class to assist me with other tasks and goals.</p>
+
+<hr>
+
+<p id ="P3" class = "ProjectName">Project_Three: Hindi Alphabet Test</p>
+
+<div class = "link">
+<a href= "HindiAlphabetStudy.zip"> HindiAlphabetStudy.zip</a>
+</div>
+<br>
+<p class = "ProjectDescription">	
+This was a recreational project that I had made during my first semester of learning Java.  During this time, I had an interest in learning the Hindi language, and the first step of this process was learning the alphabet.  
+Although this project is very elementary in its execution as is evident by the use of English pronunciation in place of actual Hindi characters and its heavy reliance on user input, I thought this project was notable because it was the first instance in which I found 
+myself able to use what I learned in a CS class to develop myself in other areas of interest.  Furthermore, after reviewing this projects some time later, I realized that even though this was written during my first year of coding, this project does do somethings well.
+For example, while testing you from a list of inputs from a local file, it chooses the inputs randomly and without repititon; additionally, after you finish testing yourself on the letters, it informs you about which letter you struggled the most with and asks the 
+user if they want a graph depicting which words they got wrong.  Using all the knowledge I had, I constructed an alphabet test which, in my opinion, aged well for what it was.
+</p>
+
+<br>
+
+<hr>
+
+
+
+<p id = "Contact" class = "ProjectName" style = "font-size:30px"> Contact Information<p>
+<small class = "Email">Email: </small>
+<a href="mailto:ngawang30@gmail.com" class = "Email" title="Click To Email"> Ngawang30@gmail.com </a>
+<br>
+<small class = "Email"> Resume </small>
+<a href="info/NgawangRinchen_Resume.docx" style = "display:block ; text-align:center"  title="Click To Download"> Resume </a>
+
+
+
+
+
+<div class = "Icons">
+<a href = "https://github.com/ngawang30?tab=repositories"><i class = "fa fa-github" style= "font-size:50px;color:black"></i></a>
+<a href = "https://www.linkedin.com/in/ngawang-rinchen-91b53a165/"><i class = "fa fa-linkedin" style = "font-size:50px;color:blue"></i></i>
+</div>
+
+
+</body>
 </html>
